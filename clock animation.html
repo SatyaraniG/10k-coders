@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+   body{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 20px;
+   }    
+
+.clock{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+width: 200px;height: 200px;
+border: 15px solid rgb(238, 193, 139);
+border-radius: 50%;
+/* background-color:rgb(155, 117, 117) ; */
+box-shadow: 2px 2px rgb(187, 160, 214) ;
+background-image: url();
+background-size: contain;
+
+}
+.clock::before{
+    content:"" ;
+position: absolute;
+top: 95px;
+left: 50%;
+width: 90px;
+height: 2px;
+background: #f46868;
+border-radius: 3px;
+animation: sec 30s ;
+transform-origin: left;
+animation-iteration-count: infinite;
+}
+.clock::after{
+    content:"" ;
+position: absolute;
+top: 45px;
+left: 50%;
+width: 4px;
+height:50px;
+background-color: #262626;
+border-radius: 3px;
+animation-name: hour ;
+animation-duration: 100s ;
+transform-origin: bottom;
+}
+.min{
+    position: absolute;
+    border: 1px solid black;
+    width: 40px;
+    height: 2px;
+    background-color: black;
+    border-radius: 3px;
+    margin-top: 75px;
+    margin-left: 75px;
+    transform: rotate(70deg);
+   }
+   @keyframes hour {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+@keyframes sec {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+.num1{
+    margin-left: 90px;
+   margin-top: 20px;
+}
+.num2{
+   margin-left: 150px;
+   margin-top: 50px;
+   padding-left:20px;
+}
+.num3{
+    margin-left: 100px;
+   margin-top: 50px;
+   /* padding-left:20px;  */
+}
+.num4{
+    margin-left: 20px;
+   margin-top: -90px;
+   }
+   .num5{
+    /* transform: rotate(-10deg); */
+    margin-left: 45px;
+   margin-top:-90px;
+   }
+.num6{
+    margin-left: 20px;
+   margin-top: 10px;
+} 
+.num7{
+    margin-left: 32px;
+   margin-top: 45px; 
+}
+.num8{
+    margin-left: 65px;
+   margin-top: 2px; 
+}
+.num9{
+margin-left: 140px;
+margin-top: -20px;
+}
+.num10{
+margin-left: 165px;
+margin-top: -55px;
+}
+.num11{
+    margin-top: -100px;
+    margin-left: 165px;
+}
+.num12{
+margin-top: -50px;
+margin-left: 140px;
+}
+
+
+.letter{
+  font-size: 100px;
+  margin-top: 150px;
+  animation-name: letter;
+  animation-duration: 5s;
+  /* animation-iteration-count: infinite; */
+}
+    </style>
+</head>
+<body>
+    <div class="clock">
+        
+<div class="hour"></div>
+<div class="min"></div>
+<div class="sec"></div>
+
+<div class="num1">12</div>
+<div class="num2">3</div>
+<div class="num3">6</div>
+<div class="num4">9</div>
+
+<div class="num5">11</div>
+<div class="num6">10</div>
+<div class="num7">8</div>
+<div class="num8">7</div>
+<div class="num9">5</div>
+<div class="num10">4</div>
+<div class="num11">2</div>
+<div class="num12">1</div>
+
+<!-- <div class="letter">Birthday</div> -->
+
+
+
+    </div>
+</body>
+</html>
